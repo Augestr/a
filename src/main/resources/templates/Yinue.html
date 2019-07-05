@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Yinue音乐</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/lib/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css">
+    <style>
+        body{
+            padding-top:50px;
+        }
+        .carousel{
+            padding: 0px;
+            text-align: center;
+        }
+        .navbar-inverse{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        .breadcrumb{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        .breadcrumb> li + li:before {
+            color: #CCCCCC;
+            content: "| ";
+            padding: 0 5px;
+        }
+        .form-control{
+            border-radius: 25px 25px;
+        }
+        p1{
+            color:white;
+        }
+        p2{
+            color: white;
+            font-family: Arial;
+            font-size: 8px;
+        }
+        p3{
+            color:#7f7c7c;
+            font-family: Arial;
+        }
+        p4{
+            color: #999999;
+            font-family: Arial;
+            font-size: 7px;
+        }
+        p5{
+            color: #4D4D4D;
+           font-family: 等线;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--导航栏开始-->
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="../static/images/logo03.jpg" class="img-circle navbar-i" >
+                    <a class="navbar-brand" href="#">Yinue音乐</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="Yinue.html">发现音乐</a>
+                        </li>
+                        <li>
+                            <a href="mine.html">我的音乐</a>
+                        </li>
+                        <li>
+                            <a href="dongtai.html">朋友</a>
+                        </li>
+                        <li>
+                            <a href="#">商城</a>
+                        </li>
+                        <li>
+                        <a href="#">音乐人</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">客户端<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">HQ高品质 全员开启</a>
+                                </li>
+                                <li>
+                                    <a href="#">独家音效 全面升级</a>
+                                </li>
+                                <li>
+                                    <a href="#">轻盈视觉 动态皮肤</a>
+                                </li>
+                                <button type="button" class="btn btn-block" style="background-color: #cc0000;color:white">下载体验</button>
+                            </ul>
+                        </li>
+                        <span class="badge-primary" style="background-color: #cc0000;"><p1>hot</p1></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">登录&nbsp;<span class="glyphicon glyphicon-log-in"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a data-toggle="modal" data-target="#denglu">手机号登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">微信登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">qq登录</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">新浪微博的登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">网易云邮箱账号登录</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="register.html">注册&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;</a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="input-group" >
+                         <span class="input-group-addon"style="height:30px;background-color: white" >
+                           <span class="glyphicon glyphicon-search" ></span>
+                         </span>
+                            <input class="form-control" style="height:30px;width: 170px" placeholder="音乐/视频/电台/用户" type="text">
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--导航栏结束-->
+</div>
+<div class="container-fluid" style="padding: 0.2px;margin: 0px">
+    <!--次导航栏开始-->
+    <div class="row clearfix">
+        <div style="background-color: #cc0000;height:30px;padding-top: 5px">
+            <div class="align-bottom">
+            <div class="col-md-1 col-md-offset-3">
+               <a href="#"><p2>推荐</p2></a>
+            </div>
+            </div>
+            <div class="col-md-1">
+                <a href="#"><p2>排行榜</p2></a>
+            </div>
+            <div class="col-md-1">
+                <a href="#"><p2>歌单</p2></a>
+            </div>
+            <div class="col-md-1">
+                <a href="#"><p2>主播电台</p2></a>
+            </div>
+            <div class="col-md-1">
+               <a href="#"><p2>歌手</p2></a>
+            </div>
+            <div class="col-md-1">
+                <a href="#"><p2>新碟上架</p2></a>
+            </div>
+        </div>
+    </div>
+    <!--次导航栏结束-->
+</div>
+<!--轮播图开始-->
+<div class="container-fluid"style="padding: 0;margin: 0">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="carousel slide" id="carousel-961431">
+                <ol class="carousel-indicators">
+                    <li data-slide-to="0" data-target="#carousel-961431" class="active" ></li>
+                    <li data-slide-to="1" data-target="#carousel-961431"></li>
+                    <li data-slide-to="2" data-target="#carousel-961431"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="" src="../static/images/sing01.jpg" />
+                        <div class="carousel-caption">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../static/images/sing02.jpg" />
+                        <div class="carousel-caption">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../static/images/sing03.jpeg">
+                        <div class="carousel-caption">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div> <a class="left carousel-control" href="#carousel-961431" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-961431" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--轮播图结束-->
+<div class="container-fluid">
+        <div class="row clearfix">
+            <hr>
+        </div>
+</div>
+<!--正文开始-->
+<div class="container">
+    <div class="row clearfix">
+        <!--左侧部分开始-->
+        <div class="col-md-8 column">
+            <!--热门推荐-->
+          <div ass="col-md-12">
+            <ul class="breadcrumb" style="background-color: white">
+                <span class="glyphicon glyphicon-unchecked" style="color: rgb(207, 0, 0); font-size: 15px;">
+                    </span>
+                <li>
+                <h4>热门推荐</h4>
+                </li>
+                <li>
+                    <a href="#"><p3>华语</p3></a>
+                </li>
+                <li>
+                    <a href="#"><p3>流行</p3></a>
+                </li>
+                <li>
+                    <a href="#"><p3>摇滚</p3></a>
+                </li>
+                <li>
+                    <a href="#"><p3>民谣</p3></a>
+                </li>
+                <li>
+                    <a href="#"><p3>电子</p3></a>
+                </li>
+                <li>
+                <a href="#"><p3>更多>></p3></a>
+                </li>
+            </ul>
+            <img src="../static/images/zhixian_red.jpg" style="width: 630px">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="col-md-3">
+                        <div class="col-md-12">
+                       <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan01.png"></a>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="" style="color: black">【国人唱见】百首佳作，一人一曲演绎一段情</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12">
+                            <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan02.png"></a>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="" style="color: black">清凉音嗓|是炎夏里的蒙蒙细雨</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12">
+                            <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan03.png"></a>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="" style="color: black">英语四级推荐歌曲</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-12">
+                            <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan04.png"></a>
+                        </div>
+                        <div class="col-md-12">
+                            <a href="" style="color: black">早安，亲爱的你。</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12"><img src="../static/images/gedan01/kongbai.png"> </div>
+                <div class="col-md-12 column">
+                    <div class="col-md-12 column">
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan%2005.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">【贾斯汀比伯】百听不厌|魔性神曲</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan06.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">专题节目：【毒蛇情感电台那些事儿】第十七期</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan%2007.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">【欧美】抖腿族'节奏控福利</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/gedan01/gedanT/gedan08.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">爱笑的眼睛</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <!--个性化推荐-->
+            <ul class="breadcrumb" style="background-color: white">
+                <span class="glyphicon glyphicon-unchecked" style="color: rgb(207, 0, 0); font-size: 15px;">
+                    </span>
+                <li>
+                    <h4 style="color:black ">个性化推荐</h4>
+                </li>
+                <li>
+                    <a href="#"><p3>更多>></p3></a>
+                </li>
+            </ul>
+            <img src="../static/images/zhixian_red.jpg"style="width: 630px">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/tuijian01/tuijian/tuijian01.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">每日歌曲推荐</a></br>
+                                <p4>根据你的口味生成，每天6点更新</p4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/tuijian01/tuijian/tuijian%2002.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">[聚精会神]工作学习必备专属背景音乐</a></br>
+                                <p4>猜你喜欢</p4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img  src="../static/images/tuijian01/tuijian/tuijian03.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">民谣200首【精选】</a></br>
+                                <p4>根据你喜欢的推荐</p4>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="col-md-12">
+                                <a class="" style="width: 142px;height: 142px" href=""><img src="../static/images/tuijian01/tuijian/tuijian04.png"></a>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="" style="color: black">精选|林宥嘉 薛之谦 毛不易 李荣浩</a></br>
+                                <p4>根据你喜欢的推荐</p4>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!--新碟上架-->
+            <ul class="breadcrumb" style="background-color: white">
+                <span class="glyphicon glyphicon-unchecked" style="color: rgb(207, 0, 0); font-size: 15px;">
+                    </span>
+                <li>
+                    <h4 style="color:black ">新碟上架</h4>
+                </li>
+                <li>
+                    <a href="#"><p3>更多>></p3></a>
+                </li>
+            </ul>
+            <img src="../static/images/zhixian_red.jpg"style="width: 630px">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- 轮播（Carousel）项目 -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-md-12">
+                                    <div class="col-md-offset-1 col-md-2">
+                                        <img src="../static/images/xindie01/xindie01.png" alt="First slide"><br>
+                                        <p>咬掉半口苹果<br>
+                                            <p4>廖俊涛</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie02.png" alt="Second slide">
+                                        <p>在夏枝繁茂..<br>
+                                           <p4>钱正昊</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie03.png" alt="Third slide">
+                                        <p>忘记拥抱...<br>
+                                            <p4>Sunnil..</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie04.png" alt="Third slide">
+                                        <p>All Night<br>
+                                            <p4>BTS</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie05.png" alt="Third slide">
+                                        <p>Trust Myself<br>
+                                            <p4>袁娅维</p4></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-12">
+                                    <div class="col-md-offset-1 col-md-2">
+                                        <img src="../static/images/xindie01/xindie06.png" alt=""><br>
+                                        <p>光之海<br>
+                                            <p4>A-Lin</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie07.png" alt="">
+                                        <p>Maps<br>
+                                            <p4>Far East M..</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie08.png" alt="">
+                                        <p>Like a Fan<br>
+                                            <p4>范丞丞</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie09.png" alt="">
+                                        <p>You Need To.<br>
+                                            <p4>Taylor Swift</p4></p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <img src="../static/images/xindie01/xindie10.png" alt="">
+                                        <p>Senorita<br>
+                                            <p4>Shawn Men..</p4></p>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- 轮播（Carousel）导航 -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--榜单-->
+            <ul class="breadcrumb" style="background-color: white">
+                <span class="glyphicon glyphicon-unchecked" style="color: rgb(207, 0, 0); font-size: 15px;">
+                    </span>
+                <li>
+                    <h4 style="color:black ">榜单</h4>
+                </li>
+                <li>
+                    <a href="#"><p3>更多>></p3></a>
+                </li>
+            </ul>
+            <img src="../static/images/zhixian_red.jpg" style="width: 630px">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <table class="table table-bordered table-responsive table-striped">
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="media">
+                                <div class="media-left">
+                                    <img alt="" class="img-fluid " src="../static/images/bangdan/bangd01.png">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <a href=""><h4 style="color:#3c3a3a"><b>云音乐飙升榜</b></h4></a>
+                                        <p4><a href="#"><span class="glyphicon glyphicon-play-circle" style="color: #999999; font-size: 30px;"></span></a>&nbsp;&nbsp;
+                                            <a href="#"><span class="glyphicon glyphicon-plus-sign" style="color:#999999; font-size: 30px;"></span></a></p4>
+                                    </div>
+                                </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="media">
+                                <div class="media-left">
+                                    <img alt="" class="img-fluid " src="../static/images/bangdan/bangdan02.png">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <a href=""><h4 style="color:#3c3a3a"><b>云音乐新歌榜</b></h4></a>
+                                        <p4><a href="#"><span class="glyphicon glyphicon-play-circle" style="color: #999999; font-size: 30px;"></span></a>&nbsp;&nbsp;
+                                            <a href="#"><span class="glyphicon glyphicon-plus-sign" style="color:#999999; font-size: 30px;"></span></a></p4>
+                                    </div>
+                                </div>
+                                </div>
+                                </th>
+                            <th>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img alt="" class="img-fluid " src="../static/images/bangdan/bangdan03.png">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <a href=""><h4 style="color: #3c3a3a"><b>云原创歌曲榜</b></h4></a>
+                                            <p6><a href="#"><span class="glyphicon glyphicon-play-circle" style="color: #999999;font-size: 30px;"></span></a>&nbsp;&nbsp;
+                                            <a href="#"><span class="glyphicon glyphicon-plus-sign" style="color:#999999; font-size: 30px;"></span></a></p6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody style="color: #635f5f; font-family: Arial;font-size: 5px;">
+                        <tr>
+                            <th>1 那女孩对我说</th>
+                            <th>1 祝你爱我到天荒地老</th>
+                            <th>1 暖一杯茶</th>
+                        </tr>
+                        <tr>
+                            <th>2 All Night</th>
+                            <th>2 孤身</th>
+                            <th>2 你们俩</th>
+                        </tr>
+                        <tr>
+                            <th>3 Calmn（Alan Walker Remix）</th>
+                            <th>3 情深深雨蒙蒙</th>
+                            <th>3 唐人</th>
+                        </tr>
+                        <tr>
+                            <th>4 夏至</th>
+                            <th>4 这一生关于你的风景</th>
+                            <th>4 庸人</th>
+                        </tr>
+                        <tr>
+                            <th>查看全部></th>
+                            <th>查看全部></th>
+                            <th>查看全部></th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--左侧部分结束-->
+        <!--右侧部分开始-->
+        <div class="col-md-4 column">
+            <table class="table table-bordered" >
+                <thead>
+                <tr>
+                    <th>
+            <div class="col-md-12">
+                    <p5>登录Yinue音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p5></br>
+                <button class="btn btn-default;" style="background-color: #cc0000;color:white;">用户登录</button>
+
+            </div>
+
+                    </th>
+                </tr>
+                </thead>
+            <div class="row clearfix">
+                    <thead><tr><th>
+                <div class="col-md-12 column">
+                    <ul class="breadcrumb " style="background-color: white;padding-bottom: 0px;margin-bottom: 0px">
+                        <li>
+                            <h6><b>入驻歌手</b></h6>
+                        </li>
+                        <li>
+                            <a class="btn" href="#"><p5>查看全部></p5></a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="col-md-12 border=1px">
+                        <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                           <div class="media">
+                               <div class="media-left">
+                                   <img class="img-fluid " src="../static/images/sing/zhanghuimei.jpg">
+                               </div>
+                               <div class="media-body">
+                                   <div class="media-heading">
+                                       <a href=""><h4 style="color: black"><b>张惠妹aMEI</b></h4></a>
+                                       <p4>台湾歌手张惠妹</p4>
+                                   </div>
+                               </div>
+                           </div>
+                        </button>
+                        <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="img-fluid" src="../static/images/sing/fine.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading media-right">
+                                        <a href=""><h4 style="color: black"><b>Fine乐团</b></h4></a>
+                                        <p4>独立音乐人</p4>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="img-fluid" src="../static/images/sing/wanxiaoli.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <a href=""><h4 style="color: black"><b>万晓利</b></h4></a>
+                                        <p4>民谣歌手、中国现...</p4>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="img-fluid " src="../static/images/sing/zhaolei.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading media-right"><a href=""><h4 style="color: black"><b>音乐人赵雷</b></h4></a>
+                                        <p4>民谣歌手</p4>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="img-fluid " src="../static/images/sing/wangsanfu.jpg">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading media-right"><a href=""><h4 style="color: black"><b>王三薄</b></h4></a>
+                                        <p4>台湾歌手张惠妹</p4>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="btn btn-default btn-block" style="width: 235px;height:30px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                            <b>申请成为音乐人</b>
+                        </button>
+                    </div>
+                </div></th></tr></thead>
+                    <tbody><tr><th>
+                    <div class="col-md-12">
+                        <ul class="breadcrumb" style="background-color: white">
+                            <li>
+                                <h6><b>热门主播</b></h6>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img src="../static/images/sing/singer004.jpg" class="media-object" style="width:60px"></a>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="#" style="color:#343333">DJ陈立</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                <p5>心理学家、美食家陈李教授</p5>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="../static/images/sing/singer001.jpg" class="media-object" style="width:60px">
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="#"style="color:#343333">DJ艳秋&nbsp;</a><span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                <p5>著名音乐节目主持人</p5>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="../static/images/sing/singer002.jpg" class="media-object" style="width:60px">
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="#" style="color:#343333">南京大剧院古典音乐频道</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                <p5>国家大剧院古典音乐官方</p5>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="../static/images/sing/singer000.jpg" class="media-object" style="width:60px">
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="#" style="color:#343333">DJ小舒</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                <p5>独立DJ，CRI环球旅游广播...</p5>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="../static/images/sing/singer003.jpg" class="media-object" style="width:60px">
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="#"  style="color:#343333"> 谢谢收听</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                <p5>南京电台主持人王馨</p5>
+                            </div>
+                        </div>
+                    </div>
+                    </th></tr></tbody>
+            </div>
+                </table>
+              </div>
+            </div>
+            <hr>
+        </div>
+        <!--右侧部分结束-->
+    </div>
+</div>
+<!--正文结束-->
+<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <hr>
+        </div>
+    </div>
+</div>
+<!--底部内容开始-->
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="media media-left" style="text-align: left" >
+                <ul class="breadcrumb" style="background-color: white">
+                    <li>
+                        <a><p4>关于Yinue</p4></a>
+                    </li>
+                    <li>
+                        <a><p4>客户服务</p4></a>
+                    </li>
+                    <li>
+                        <a><p4>服务条款</p4></a>
+                    </li>
+                    <li>
+                        <a><p4>隐私策略</p4></a>
+                    </li>
+                    <li>
+                        <a><p4>版权投诉指引</p4></a>
+                    </li>
+                    <li>
+                        <a><p4>意见反馈&nbsp;&nbsp;&nbsp;|</p4></a>
+                    </li>
+                </ul>
+                <p><p5>&nbsp;&nbsp;&nbsp;&nbsp;Yinue公司版权所有1997-2019&nbsp;&nbsp;&nbsp;杭州乐都科技有限公司运营：浙网文[2018]3506-263号</br>
+                    违法和不良信息举报电话：0571-89853516&nbsp;&nbsp;&nbsp;举报邮箱：llz140@163.com</p5></p>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</div>
+<!--底部内容结束-->
+<!-- 模态框开始-->
+<div class="modal fade" id="denglu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                用户登陆</h4>
+            </div>
+            <div class="modal-body">
+                </form>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">名字</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">请记住我
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default" style="background-color: #cc0000;color:white">登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--模态框结束-->
+<script src="../static/jquery/jquery-3.4.1.js"></script>
+<script src="../static/jquery/popper.min.js"></script>
+<script src="../static/lib/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script type="text/javascript">
+    $(function(){
+        /*interval为每个轮播项之间的切换时间
+          wrap定义是否循环轮播*/
+        $("#carousel-961431").carousel({
+            interval: 5000,
+            wrap: true
+        });
+    })
+</script>
+</body>
+</html>

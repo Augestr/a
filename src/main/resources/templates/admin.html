@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/lib/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/index.css">
+    <style>
+        body{
+            padding-top:50px;
+        }
+        .carousel{
+            padding: 0px;
+            text-align: center;
+        }
+        .navbar-inverse{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        .breadcrumb{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        .breadcrumb> li + li:before {
+            color: #CCCCCC;
+            content: "| ";
+            padding: 0 5px;
+        }
+        .form-control{
+            border-radius: 25px 25px;
+        }
+        p1{
+            color:white;
+        }
+        p2{
+            color: white;
+            font-family: Arial;
+            font-size: small;
+            font-size: 8px;
+        }
+        p3{
+            color:#7f7c7c;
+            font-family: Arial;
+        }
+        p4{
+            color: #999999;
+            font-family: Arial;
+            font-size: 7px;
+        }
+        p5{
+            color: #635f5f;
+            font-family: Arial;
+            font-size: 5px;
+        }
+        /* 表格容器样式，用flex布局可保证table内容能铺满剩余空间 */
+         .sti-tbl-container {
+             height: 245px;
+             overflow : hidden;
+             display : flex;
+             flex-direction: column;
+         }
+        /* 设置表格的布局方式，用于宽度对齐 */
+        .sti-tbl-body>table, .sti-tbl-header>table {
+            table-layout: fixed;
+        }
+        /* 设置表格内容容器，用于铺满整个剩余空间 */
+        .sti-tbl-container .sti-tbl-body {
+            flex-grow : 1;
+            overflow-y : scroll;
+        }
+    </style>
+</head>
+<body background="../static/images/bg02.jpg">
+<!--导航栏开始-->
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="../static/images/logo03.jpg" class="img-circle navbar-i" >
+                    <a class="navbar-brand" href="#">Yinue音乐</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="#">退出&nbsp;<span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li style="position: absolute;bottom: 13%;right: 6%;color: #999999">
+                           <h5> 欢迎：Admin</h5>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="padding: 0.2px;margin: 0px">
+    <div class="row clearfix">
+        <div style="background-color: #cc0000;height:4px;padding-top: 5px">
+        </div>
+    </div>
+    <!--导航栏结束-->
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <hr>
+        </div>
+    </div>
+    <!--主体开始-->
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-md-2 column">
+                <div class="col-md-12">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default" style="background-color: rgba(255,255,255,0)">
+                            <div class="panel-heading" style="background-color: rgba(255,255,255,0)">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                        <span class="glyphicon glyphicon-th-list" style="color: #999999">数据管理</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="">
+                                     <button class="btn btn-block" href="#yonghu" data-toggle="tab" style="background-color: rgba(255,255,255,0);color: #999999;height: 30px">用户管理</button>
+                                    </div>
+                                    <div class="">
+                                     <button class="btn btn-block" href="#gequ" data-toggle="tab" style="background-color: rgba(255,255,255,0);color: #999999;height: 30px">歌曲管理</button>
+                                    </div>
+                                    <div class="">
+                                     <button class="btn btn-block" href="#pinglun" data-toggle="tab" style="background-color: rgba(255,255,255,0);color: #999999;height: 30px">评论管理</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--右边内容-->
+            <div class="col-md-9 column" style="background: url('../static/images/bg07.jpg')no-repeat">
+                <div id="myTabContent" class="tab-content">
+                    <!--初始-->
+                    <div class="tab-pane fade in active">
+                       <p>欢迎！</p>
+                    </div>
+                    <!--初始/-->
+                    <!--用户管理-->
+                    <div class="tab-pane fade " id="yonghu" style="height: 600px">
+                        <h1>用户管理</h1>
+                        <img src="../static/images/zhixian_red.jpg" alt="" style="width: 900px;height: 3px;">
+                        <div class="col-md-12">
+                            <div class="sti-tbl-container">
+                                <!-- 表头容器，必须留出17px的滚动条位置 -->
+                                <div class="sti-tbl-header" style="padding-right:17px;">
+                                    <table class="table table-bordered" style="margin-bottom: 0px;border-bottom-style: none;">
+                                        <tr>
+                                            <th style="width : 10%;">#</th>
+                                            <th  style="width : 20%;">First Name</th>
+                                            <th  style="width : 30%;">Last Name</th>
+                                            <th  style="width : 30%;">Username</th>
+                                            <th  style="width : 10%;">修改</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- 表格内容容器-->
+                                <div class="sti-tbl-body">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">1</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">2</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">3</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">4</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">5</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">6</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <img src="../static/images/gedan01/kongbai.png">
+                        </div>
+                        <div class="col-md-12">
+                            请输入要插入的数据：
+                           <form class="form-group">
+                               <label>属性1：</label><input type="text"><br>
+                               <label>属性1：</label><input type="text"><br>
+                               <label>属性1：</label><input type="text"><br>
+                               <label>属性1：</label><input type="text"><br>
+                               <label>属性1：</label><input type="text"><br>
+                               <label>属性1：</label><input type="text"><br>
+                               <button class="btn btn-default">提交</button>
+                           </form>
+                        </div>
+                    </div>
+                    <!--用户管理/-->
+                    <!--歌曲管理-->
+                    <div class="tab-pane fade" id="gequ" style="height: 600px">
+                        <h1>歌曲管理</h1>
+                        <img src="../static/images/zhixian_red.jpg" alt="" style="width: 900px;height: 3px;">
+                        <div class="col-md-12">
+                            <div class="sti-tbl-container">
+                                <!-- 表头容器，必须留出17px的滚动条位置 -->
+                                <div class="sti-tbl-header" style="padding-right:17px;">
+                                    <table class="table table-bordered" style="margin-bottom: 0px;border-bottom-style: none;">
+                                        <tr>
+                                            <th style="width : 10%;">#</th>
+                                            <th  style="width : 20%;">First Name</th>
+                                            <th  style="width : 30%;">Last Name</th>
+                                            <th  style="width : 30%;">Username</th>
+                                            <th  style="width : 10%;">修改</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- 表格内容容器-->
+                                <div class="sti-tbl-body">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">1</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">2</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">3</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">4</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">5</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">6</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <img src="../static/images/gedan01/kongbai.png">
+                        </div>
+                        <div class="col-md-12">
+                            请输入要插入的数据：
+                            <form class="form-group">
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <button class="btn btn-default">提交</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--歌曲管理-->
+                    <!--评论管理-->
+                    <div class="tab-pane fade " id="pinglun" style="height: 600px">
+                        <h1>评论管理</h1>
+                        <img src="../static/images/zhixian_red.jpg" alt="" style="width: 900px;height: 3px;">
+                        <div class="col-md-12">
+                            <div class="sti-tbl-container">
+                                <!-- 表头容器，必须留出17px的滚动条位置 -->
+                                <div class="sti-tbl-header" style="padding-right:17px;">
+                                    <table class="table table-bordered" style="margin-bottom: 0px;border-bottom-style: none;">
+                                        <tr>
+                                            <th style="width : 10%;">#</th>
+                                            <th  style="width : 20%;">First Name</th>
+                                            <th  style="width : 30%;">Last Name</th>
+                                            <th  style="width : 30%;">Username</th>
+                                            <th  style="width : 10%;">修改</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- 表格内容容器-->
+                                <div class="sti-tbl-body">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">1</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">2</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">3</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">4</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">5</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width : 10%;">6</th>
+                                            <td style="width : 20%;">Mark</td>
+                                            <td style="width : 30%;">Otto</td>
+                                            <td style="width : 30%;">@mdo</td>
+                                            <td  style="width : 10%;">
+                                                <a href=""><span class="glyphicon glyphicon-edit" style="color: rgb(7, 0, 0);"></span></a> &nbsp;
+                                                <a href=""><span class="glyphicon glyphicon-trash" style="color: rgb(7, 0, 0);"></span></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <img src="../static/images/gedan01/kongbai.png">
+                        </div>
+                        <div class="col-md-12">
+                            请输入要插入的数据：
+                            <form class="form-group">
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <label>属性1：</label><input type="text"><br>
+                                <button class="btn btn-default">提交</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--评论管理-->
+                    <!-右边内容/-->
+                </div>
+            </div>
+        </div>
+</div>
+    <!--主体结束/-->
+
+    <!-- 模态框-->
+    <div class="modal fade" id="shanchu01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 60%;height: 40%">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel4">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label"><h4>确定删除歌曲？</h4></label>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="modal fade" id="shanchu02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 60%;height: 40%">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel5">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label"><h4>确定删除歌单？</h4></label>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!--模态框/-->
+    <script src="../static/jquery/jquery-3.4.1.js"></script>
+    <script src="../static/jquery/popper.min.js"></script>
+    <script src="../static/lib/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+</div>
+</body>
+</html>

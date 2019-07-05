@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的Yinue音乐</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/lib/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/index.css">
+    <style>
+        body{
+            padding-top:50px;
+        }
+        .carousel{
+            padding: 0px;
+            text-align: center;
+        }
+        .navbar-inverse{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        .breadcrumb{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        .breadcrumb> li + li:before {
+            color: #CCCCCC;
+            content: "| ";
+            padding: 0 5px;
+        }
+        .form-control{
+            border-radius: 25px 25px;
+        }
+        p1{
+            color:white;
+        }
+        p2{
+            color: white;
+            font-family: Arial;
+            font-size: small;
+            font-size: 8px;
+        }
+        p3{
+            color:#7f7c7c;
+            font-family: Arial;
+        }
+        p4{
+            color: #999999;
+            font-family: Arial;
+            font-size: 7px;
+        }
+        p5{
+            color: #635f5f;
+            font-family: Arial;
+            font-size: 5px;
+        }
+    </style>
+</head>
+<body>
+<!--导航栏开始-->
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="../static/images/logo03.jpg" class="img-circle navbar-i" >
+                    <a class="navbar-brand" href="#">Yinue音乐</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="Yinue.html">发现音乐</a>
+                        </li>
+                        <li class="active">
+                            <a href="mine.html">我的音乐</a>
+                        </li>
+                        <li>
+                            <a href="dongtai.html">朋友</a>
+                        </li>
+                        <li>
+                            <a href="#">商城</a>
+                        </li>
+                        <li>
+                            <a href="#">音乐人</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">客户端<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">HQ高品质 全员开启</a>
+                                </li>
+                                <li>
+                                    <a href="#">独家音效 全面升级</a>
+                                </li>
+                                <li>
+                                    <a href="#">轻盈视觉 动态皮肤</a>
+                                </li>
+                                <button type="button" class="btn btn-block" style="background-color: #cc0000;color:white">下载体验</button>
+                            </ul>
+                        </li>
+                        <span class="badge-primary" style="background-color: #cc0000;"><p1>hot</p1></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">登录&nbsp;<span class="glyphicon glyphicon-log-in"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a data-toggle="modal" data-target="#denglu">手机号登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">微信登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">qq登录</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">新浪微博的登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">网易云邮箱账号登录</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">注册&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;</a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="input-group" >
+                         <span class="input-group-addon"style="height:30px;background-color: white" >
+                           <span class="glyphicon glyphicon-search" ></span>
+                         </span>
+                            <input class="form-control" style="height:30px;width: 170px" placeholder="音乐/视频/电台/用户" type="text">
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="padding: 0.2px;margin: 0px">
+    <div class="row clearfix">
+        <div style="background-color: #cc0000;height:7px;padding-top: 5px">
+    </div>
+</div>
+<!--导航栏结束-->
+<div class="container-fluid">
+    <div class="row clearfix">
+        <hr>
+    </div>
+</div>
+<!--主体开始-->
+<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="col-md-3 column">
+            <div class="col-md-12">
+                <button href="#home" data-toggle="tab" class="btn btn-default btn-block" style="width: 253px;height:auto;padding: 0px;margin: 6px;background-color: #f7f4f4">
+                 <h4><b>我的电台（）</b></h4>
+                </button>
+                <div class="col-md-12">
+                    <button class="btn btn-default"data-toggle="modal" data-target="#chuangjian" style="padding-top:5px;margin-top: 10px ">
+                        <span class="glyphicon glyphicon-plus" style="color: #cc0000"></span>新建</button>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion1" style="width: 253px">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1"
+                                   href="#collapseOne">
+                                    <h4><b><span class="caret"></span>创建的歌单（）</b></h4>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#ejb" data-toggle="tab">
+                                        <img src="../static/images/sing/linjujie.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>我喜欢的音乐</h5>
+                                        <p4>60首</p4>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#ejb" data-toggle="tab">
+                                            <img src="../static/images/sing/sing01.jpeg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>我喜欢的音乐</h5>
+                                        <p4>60首   </p4>
+                                        <A href="#bianji" data-toggle="tab"><span class="glyphicon glyphicon-edit" style="color: #999999;"></span></A>&nbsp;
+                                        <a href="" data-toggle="modal" data-target="#shanchu02"><span class="glyphicon glyphicon-trash" style="color:#999999;"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion2" style="width: 253px">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion2"
+                                   href="#collapseTwo">
+                                    <h4><b><span class="caret"></span>收藏的歌单（）</b></h4>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#ejb" data-toggle="tab">
+                                            <img src="../static/images/sing/linjujie.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>我喜欢的音乐</h5>
+                                        <p4>60首</p4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右边内容-->
+        <div class="col-md-9 column">
+            <div id="myTabContent" class="tab-content">
+                <!--我的电台-->
+                <div class="tab-pane fade in active" id="home">
+                    <h1>我订阅的电台(1)</h1>
+                    <img src="../static/images/zhixian_red.jpg" alt="" style="width: 900px;height: 3px;">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <div class="media">
+                                <div class="media media-left">
+                                    <img src="../static/images/gequ/diantai.png" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <h4>潮英语</h4>
+                                        <p5>by CoCoHu911</p5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-md-offset-5">
+                           <a href="#"><span class="glyphicon glyphicon-trash" style="color: #999999;font-size: 20px"></span></a>
+                            &nbsp;<a href="#"><span class="glyphicon glyphicon-share-alt" style="color: #999999;font-size: 20px"></span></a>
+                        </div>
+                        <div class="col-md-1">
+                            <p5>90期</p5>
+                        </div>
+                    </div>
+                </div>
+                <!--我的电台/-->
+                <!--歌单栏-->
+                <div class="tab-pane fade" id="ejb">
+                    <div class="col-md-12">
+                        <div class="clearfix">
+                            <!--头部-->
+                            <div class="col-md-12">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="../static/images/gedan01/gedanB/linjunjie.png" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="col-md-12">
+                                            <div class="col-md-12">
+                                                <div class="col-md-1">
+                                                    <span class="glyphicon glyphicon-tag" style="color:#cc0000; font-size: 50px"></span>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <h3><b>我喜欢的音乐</b></h3>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <a href="#bianji" data-toggle="tab"><span class="glyphicon glyphicon-edit" style="color: #999999;font-size: 20px"></span>编辑</a>
+                                                </div>
+                                            </div>
+                                            <img src="../static/images/gedan01/kongbai.png" alt="">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="">
+                                                <a href="">酒慕樱</a>&nbsp;<p5>2017-11-06创建</p5>
+                                            </div>
+                                            <img src="../static/images/gedan01/kongbai.png" alt="">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary" onclick="javascript:window.open('vpplayer.html')">
+                                                <span class="glyphicon glyphicon-play-circle" style="color:white; font-size:20px;"></span>
+                                                播放
+                                            </button>
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon  glyphicon-plus-sign" style="color:white; font-size:20px;"></span>
+                                                收藏
+                                            </button>
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-share" style="color:#999999; font-size:20px;"></span>
+                                                分享
+                                            </button>
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-download-alt" style="color:#999999; font-size:20px;"></span>
+                                                下载
+                                            </button>
+                                            <button class="btn btn-default">
+                                                <span class="glyphicon glyphicon-comment" style="color:#999999; font-size:20px;"></span>
+                                                评论
+                                            </button><br>
+                                            <img src="../static/images/gedan01/kongbai.png" alt="">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <p4>标签：</p4>
+                                            <span class="label label-default">安静</span>
+                                            <span class="label label-default">电子</span>
+                                            <span class="label label-default">后摇</span><br>
+                                            <img src="../static/images/gedan01/kongbai.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--头部/-->
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <div class="col-md-4"><h2>歌曲列表</h2></div>
+                                    <div class="col-md-offset-6 col-md-2"> <p5>播放：45次</p5><br><p5>曲目：48首</p5></div>
+                                </div>
+                                <img src="../static/images/zhixian_red.jpg" style="height: 3px;width:1130px" alt="">
+                            </div>
+                            <!--列表-->
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>歌曲标题</td>
+                                        <td>时长</td>
+                                        <td>歌手</td>
+                                        <td>专辑</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;Breathe</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a data-toggle="modal" data-target="#shoucang" href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a data-toggle="modal" data-target="#fenxiang" href="" ><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a data-toggle="modal" data-target="#shanchu01" href="" ><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>Jacco</td>
+                                        <td>Breathe</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;江南</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;江南</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;Breathe</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;Breathe</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;Breathe</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;Breathe</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a data-toggle="modal" data-target="#shoucang" href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a data-toggle="modal" data-target="#fenxiang" href="" ><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a data-toggle="modal" data-target="#shanchu01" href="" ><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>Jacco</td>
+                                        <td>Breathe</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;江南</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;江南</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;Breathe</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><span class="glyphicon glyphicon-play-circle" style="color:#999999; font-size:20px"></span></td>
+                                        <td><p> <span class="glyphicon glyphicon-expand" style="color:#cc0000; font-size:15px;"></span>&nbsp;Breathe</p></td>
+                                        <td style="width: 200px">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4"> 04:27</div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-plus" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"><a href=""><span class="glyphicon glyphicon-share" style="color:#999999; font-size:15px"></span></a></div>
+                                                <div class="col-md-1"> <a href=""><span class="glyphicon glyphicon-trash" style="color:#999999; font-size:15px"></span></a></div>
+                                            </div>
+                                        </td>
+                                        <td>林俊杰</td>
+                                        <td>Love & Dance Hit So...</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--列表/-->
+                            <!--底部-->
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                 <h2>评论<p5>共0条评论</p5></h2>
+                                </div>
+                                <img src="../static/images/zhixian_red.jpg" style="height: 3px;width:1130px" alt="">
+                            </div>
+                            <div class="col-md-12 clearfix">
+                              <div class="col-md-3" style="width: 75px;height: 75px"><img src="../static/images/gequ/34.jpg"style="width: 74px;height: 74px"></div>
+                                <div class="col-md-1" style="width: 10px"></div>
+                                <div class="col-md-8"><textarea rows="4" style="width: 100%" placeholder="评论..."></textarea></div>
+                                <div class="col-md-3 col-md-offset-8">
+                                    <button class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                            <!--底部/-->
+                        </div>
+                    </div>
+                </div>
+                <!--歌单栏-->
+                <!--编辑歌单-->
+                <div class="tab-pane fade" id="bianji">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <p4>我喜欢的音乐</p4>>><b>编辑歌单</b><br><hr>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="clearfix">
+                            <div class="col-md-7">
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <p style="position: absolute;right: 45px">* 歌单名：</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="text" style="width: 400px;height: 40px" placeholder="我喜欢的音乐">
+                                    </div>
+                                    <img src="../static/images/gedan01/kongbai.png" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <p style="position: absolute;right: 45px">标签：</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h4><button class="btn btn-default btn-sm" style="position: absolute;top: 1px">欧美 x</button></h4>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <a href="" style="position: absolute;top: 1px">选择标签</a>
+                                    </div>
+                                    <img src="../static/images/gedan01/kongbai.png" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 col-md-offset-3">
+                                        <p5>选择的适合的标签，最多选三个</p5>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-12">
+                                        <img src="../static/images/gedan01/kongbai.png" alt="">
+                                    </div>
+                                    <div class="col-md-3">
+                                    <p style="position: absolute;right: 45px;top:20px">介绍：</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <textarea rows="5" style="width: 400px" placeholder="留下点你想要说的吧！"></textarea>
+                                    </div>
+                                    <img src="../static/images/gedan01/kongbai.png" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-default">保存</button>
+                                    <button class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div style="background: url('../static/images/gedan01/gedan07.png');width: 207px;height: 207px">
+                                    <div style="position:absolute;margin-bottom: 0px;padding-bottom: 0px;bottom: 0px">
+                                <button class="btn btn-default" style="background: rgba(90,90,54,0.5);color: white;width: 207px;">编辑封面</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--编辑歌单/-->
+        <!-右边内容/-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体结束/-->
+
+<!-- 模态框-->
+<div class="modal fade" id="denglu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    登陆界面</h4>
+            </div>
+            <div class="modal-body">
+                </form>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="firstname" class="col-sm-2 control-label">名字</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">请记住我
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default" style="background-color: #cc0000;color:white">登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="chuangjian" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel1">新建歌单</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                    <label><h4>歌单名：</h4> </label>
+                        </div>
+                        <div class="col-md-9">
+                        <input class="form-control" type="text" placeholder="写下你喜欢的歌单的名字吧！">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" >新建</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+<div class="modal fade" id="shoucang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel2">添加到歌单</h4>
+                </div>
+                <div class="modal-body">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div><!-- /.modal-content -->
+        </div>
+<div class="modal fade" id="fenxiang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel3">分享</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+<div class="modal fade" id="shanchu01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 60%;height: 40%">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel4">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label"><h4>确定删除歌曲？</h4></label>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+<div class="modal fade" id="shanchu02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 60%;height: 40%">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel5">提示</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label"><h4>确定删除歌单？</h4></label>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+<!--模态框/-->
+<script src="../static/jquery/jquery-3.4.1.js"></script>
+<script src="../static/jquery/popper.min.js"></script>
+<script src="../static/lib/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Yinue音乐</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../static/lib/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/index.css">
+    <style>
+        body{
+            padding-top:50px;
+        }
+        .carousel{
+            padding: 0px;
+            text-align: center;
+        }
+        .navbar-inverse{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        .breadcrumb{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        .breadcrumb> li + li:before {
+            color: #CCCCCC;
+            content: "| ";
+            padding: 0 5px;
+        }
+        .form-control{
+            border-radius: 25px 25px;
+        }
+        p1{
+            color:white;
+        }
+        p2{
+            color: white;
+            font-family: Arial;
+            font-size: 8px;
+        }
+        p3{
+            color:#7f7c7c;
+            font-family: Arial;
+        }
+        p4{
+            color: #999999;
+            font-family: Arial;
+            font-size: 7px;
+        }
+        p5{
+            color: #635f5f;
+            font-family: Arial;
+            font-size: 5px;
+        }
+    </style>
+</head>
+<body>
+<!--导航栏开始-->
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="images/logo03.jpg" class="img-circle navbar-i" >
+                    <a class="navbar-brand" href="#">Yinue音乐</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="Yinue.html">发现音乐</a>
+                        </li>
+                        <li>
+                            <a href="mine.html">我的音乐</a>
+                        </li>
+                        <li class="active">
+                            <a href="dongtai.html">朋友</a>
+                        </li>
+                        <li>
+                            <a href="#">商城</a>
+                        </li>
+                        <li>
+                            <a href="#">音乐人</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">客户端<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">HQ高品质 全员开启</a>
+                                </li>
+                                <li>
+                                    <a href="#">独家音效 全面升级</a>
+                                </li>
+                                <li>
+                                    <a href="#">轻盈视觉 动态皮肤</a>
+                                </li>
+                                <button type="button" class="btn btn-block" style="background-color: #cc0000;color:white">下载体验</button>
+                            </ul>
+                        </li>
+                        <span class="badge-primary" style="background-color: #cc0000;"><p1>hot</p1></span>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">登录&nbsp;<span class="glyphicon glyphicon-log-in"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a data-toggle="modal" data-target="#denglu">手机号登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">微信登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">qq登录</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">新浪微博的登录</a>
+                                </li>
+                                <li class="divider">
+                                <li>
+                                    <a href="#">网易云邮箱账号登录</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">注册&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;</a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="input-group" >
+                         <span class="input-group-addon"style="height:30px;background-color: white" >
+                           <span class="glyphicon glyphicon-search" ></span>
+                         </span>
+                            <input class="form-control" style="height:30px;width: 170px" placeholder="音乐/视频/电台/用户" type="text">
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="padding: 0.2px;margin: 0px">
+    <div class="row clearfix">
+        <div style="background-color: #cc0000;height:15px;padding-top: 5px">
+        </div>
+    </div>
+    <!--导航栏结束-->
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <hr>
+        </div>
+    </div>
+    <!--主体开始-->
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-9">
+                <div class="col-md-12">
+                    <div class="col-md-8">
+                    <h3>动态</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-default btn-sm " data-toggle="modal" data-target="#fa" style="border-radius:20px 20px"><span class="	glyphicon glyphicon-pencil"style="color: #cc0000"></span>&nbsp;发动态</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-default btn-sm"style="border-radius:20px 20px"><span class="	glyphicon glyphicon-facetime-video"style="color: #cc0000"></span>&nbsp;发布视频</button>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <img alt="" src="../static/images/zhixian_red.jpg" style="width: 790px;height: 3px">
+                </div>
+                <div class="col-md-12">
+                   <div class="col-md-12">
+                       <div class="media">
+                           <div class="media-left">
+                               <img src="../static/images/sing/sing01.jpeg" alt="">
+                           </div>
+                           <div class="media-body">
+                               <h5 class="media-heading"><a href="#">艾薇儿</a><span class="glyphicon glyphicon-tree-conifer" style="color:yellow; font-size: 24px;"> </span>发布视频</h5>
+                               <p5>6月21日&nbsp;10:21</p5>
+                           </div>
+                       </div>
+                   </div>
+                    <div class="col-md-12">
+                        <p>Show me that you mean it<br>
+                            Soooo happy with how this video turned out! It’s just a total vibe for this summer song! Make sure you check it out! Thanks</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md- col-md-offset-6">
+                            <span class="glyphicon glyphicon-thumbs-up" style="color:#2f77ec; font-size: 19px;"></span><p5>(1552)</p5>&nbsp;|&nbsp;
+                            <p5>转发（345）&nbsp;|&nbsp; 评论（366）</p5>
+
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <table class="table table-bordered" >
+                    <thead>
+                    <tr>
+                        <th>
+                            <div class="col-md-12">
+                                <p5>登录Yinue音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p5></br>
+                                <button class="btn btn-default;" style="background-color: #cc0000;color:white;">用户登录</button>
+
+                            </div>
+
+                        </th>
+                    </tr>
+                    </thead>
+                    <div class="row clearfix">
+                        <thead><tr><th>
+                            <div class="col-md-12 column">
+                                <ul class="breadcrumb " style="background-color: white;padding-bottom: 0px;margin-bottom: 0px">
+                                    <li>
+                                        <h6><b>入驻歌手</b></h6>
+                                    </li>
+                                    <li>
+                                        <a class="btn" href="#"><p5>查看全部></p5></a>
+                                    </li>
+                                </ul>
+                                <hr>
+                                <div class="col-md-12 border=1px">
+                                    <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img class="img-fluid " src="../static/images/sing/zhanghuimei.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="media-heading">
+                                                    <a href=""><h4 style="color: black"><b>张惠妹aMEI</b></h4></a>
+                                                    <p4>台湾歌手张惠妹</p4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img class="img-fluid" src="../static/images/sing/fine.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="media-heading media-right">
+                                                    <a href=""><h4 style="color: black"><b>Fine乐团</b></h4></a>
+                                                    <p4>独立音乐人</p4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img class="img-fluid" src="../static/images/sing/wanxiaoli.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="media-heading">
+                                                    <a href=""><h4 style="color: black"><b>万晓利</b></h4></a>
+                                                    <p4>民谣歌手、中国现...</p4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img class="img-fluid " src="../static/images/sing/zhaolei.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="media-heading media-right"><a href=""><h4 style="color: black"><b>音乐人赵雷</b></h4></a>
+                                                    <p4>民谣歌手</p4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="btn btn-default btn-block" style="width: 235px;height:75px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img class="img-fluid " src="../static/images/sing/wangsanfu.jpg">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="media-heading media-right"><a href=""><h4 style="color: black"><b>王三薄</b></h4></a>
+                                                    <p4>台湾歌手张惠妹</p4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button class="btn btn-default btn-block" style="width: 235px;height:30px;padding: 0px;margin: 6px;background-color: #f7f7f7">
+                                        <b>申请成为音乐人</b>
+                                    </button>
+                                </div>
+                            </div></th></tr></thead>
+                        <tbody><tr><th>
+                            <div class="col-md-12">
+                                <ul class="breadcrumb" style="background-color: white">
+                                    <li>
+                                        <h6><b>热门主播</b></h6>
+                                    </li>
+                                </ul>
+                                <hr>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><img src="../static/images/sing/singer004.jpg" class="media-object" style="width:60px"></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="#" style="color:#343333">DJ陈立</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                        <p5>心理学家、美食家陈李教授</p5>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="../static/images/sing/singer001.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="#"style="color:#343333">DJ艳秋&nbsp;</a><span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                        <p5>著名音乐节目主持人</p5>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="../static/images/sing/singer002.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="#" style="color:#343333">南京大剧院古典音乐频道</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                        <p5>国家大剧院古典音乐官方</p5>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="../static/images/sing/singer000.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="#" style="color:#343333">DJ小舒</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                        <p5>独立DJ，CRI环球旅游广播...</p5>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="../static/images/sing/singer003.jpg" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                        <h6 class="media-heading"><a href="#"  style="color:#343333"> 谢谢收听</a>&nbsp;<span class="glyphicon glyphicon-fire" style="color: rgb(206, 0, 0);"></span></h6>
+                                        <p5>南京电台主持人王馨</p5>
+                                    </div>
+                                </div>
+                            </div>
+                        </th></tr></tbody>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--主体结束-->
+    <!-- 模态框开始-->
+    <div class="modal fade" id="fa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background: #0f0f0f">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #e3e3e3">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel" style="color: #e3e3e3">分享</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form" role="form">
+                       <div class="input-group">
+                           <textarea class="form-control" rows="4"placeholder="一起聊聊吧" style="width: 560px"></textarea>
+                       </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" >分享</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!--模态框结束-->
+    <script src="../static/jquery/jquery-3.4.1.js"></script>
+    <script src="../static/jquery/popper.min.js"></script>
+    <script src="../static/lib/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+</div>
+</body>
+</html>
