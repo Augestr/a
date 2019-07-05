@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Yinue音乐</title>
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../static/lib/bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css">
+    <link href="../static/css/index.css">
     <style>
         body{
             padding-top:50px;
@@ -128,12 +128,12 @@
                                 </li>
                                 <li class="divider">
                                 <li>
-                                    <a href="#">网易云邮箱账号登录</a>
+                                    <a href="#">邮箱账号登录</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="register.html">注册&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;</a>
+                            <a data-toggle="modal" data-target="#zhuce">注册&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;</a>
                         </li>
                     </ul>
                     <form class="navbar-form navbar-right" role="search">
@@ -574,7 +574,7 @@
                     <th>
             <div class="col-md-12">
                     <p5>登录Yinue音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p5></br>
-                <button class="btn btn-default;" style="background-color: #cc0000;color:white;">用户登录</button>
+                <button class="btn btn-default" data-toggle="modal" data-target="#denglu" style="background-color: #cc0000;color:white;">用户登录</button>
 
             </div>
 
@@ -760,7 +760,7 @@
                     </li>
                 </ul>
                 <p><p5>&nbsp;&nbsp;&nbsp;&nbsp;Yinue公司版权所有1997-2019&nbsp;&nbsp;&nbsp;杭州乐都科技有限公司运营：浙网文[2018]3506-263号</br>
-                    违法和不良信息举报电话：0571-89853516&nbsp;&nbsp;&nbsp;举报邮箱：llz140@163.com</p5></p>
+                    &nbsp;&nbsp;&nbsp; 违法和不良信息举报电话：0571-89853516&nbsp;&nbsp;&nbsp;举报邮箱：llz140@163.com</p5></p>
             </div>&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
     </div>
@@ -778,18 +778,17 @@
                 用户登陆</h4>
             </div>
             <div class="modal-body">
-                </form>
                 <form class="form-horizontal" role="form">
                     <div class="form-group">
-                        <label for="firstname" class="col-sm-2 control-label">名字</label>
+                        <label for="name" class="col-sm-2 control-label">名字</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                            <input type="text" class="form-control" id="name" name="u" placeholder="请输入名字" required="required">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="lastname" class="col-sm-2 control-label">密码</label>
+                        <label for="password" class="col-sm-2 control-label">密码</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+                            <input type="password" class="form-control" id="password" name="p" placeholder="请输入密码"  required="required">
                         </div>
                     </div>
                     <div class="form-group">
@@ -803,14 +802,59 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default" style="background-color: #cc0000;color:white">登录</button>
+                                <label>
+                                    <div id="insert" style="color:red;padding:0px;font-size:12px">异常显示在这里</div>
+                                </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default" style="background-color: #cc0000;color:white" onclick="loadCheck()">登录</button>
+                            <button type="reset" class="btn btn-primary">重置</button>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="zhuce" tabindex="-1" role="dialog" aria-labelledby="myModalLabel01" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
                 </button>
+                <h4 class="modal-title" id="myModalLabel01">
+                    用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="zname" class="col-sm-2 control-label">名字</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="zname" name="u" placeholder="请输入名字" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="zpassword" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="zpassword" name="p" placeholder="请输入密码"  required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ztel" class="col-sm-2 control-label">电话</label>
+                        <div class="col-sm-10">
+                            <input type="tel" class="form-control" id="ztel" name="t" placeholder="请输入电话号码"  required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default" style="background-color: #cc0000;color:white" onclick="ReCheck()">注册</button>
+                            <button type="reset" class="btn btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -819,6 +863,8 @@
 <script src="../static/jquery/jquery-3.4.1.js"></script>
 <script src="../static/jquery/popper.min.js"></script>
 <script src="../static/lib/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src="../static/jquery/jquery.validate.min.js"></script>
+<script src="../static/jquery/messages_zh.min.js"></script>
 <script type="text/javascript">
     $(function(){
         /*interval为每个轮播项之间的切换时间
@@ -828,6 +874,33 @@
             wrap: true
         });
     })
+</script>
+<script type="text/javascript">
+    var xmlhttp;
+    function loadCheck(){
+        var uname=document.getElementById('name').value;
+        var pword=document.getElementById('password').value;
+        if(uname.length==0||pword.length==0){alert("账号或密码为空");return;}
+        if (window.XMLHttpRequest) {xmlhttp=new XMLHttpRequest();}
+        else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
+        xmlhttp.onreadystatechange=getResult;
+        xmlhttp.open("POST","Demo",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("u="+uname+"&p="+pword);
+    }
+
+    function getResult(){
+        if (xmlhttp.readyState==4) {
+            if(xmlhttp.status==200){
+                var rec=xmlhttp.responseText;
+                document.getElementById("insert").innerHTML=rec;
+            }
+            else{
+                alert("连接失败");
+            }
+        }
+    }
+
 </script>
 </body>
 </html>

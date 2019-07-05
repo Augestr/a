@@ -169,18 +169,33 @@
     <div class="row clearfix">
         <div class="col-md-3 column">
             <div class="col-md-12">
-                <button href="#home" data-toggle="tab" class="btn btn-default btn-block" style="width: 253px;height:auto;padding: 0px;margin: 6px;background-color: #f7f4f4">
-                 <h4><b>我的电台（）</b></h4>
-                </button>
+                <div class="panel-group" id="accordion0" style="width: 253px">
+                    <div class="panel panel-default" style="background-color: rgba(255,255,255,0);border: white">
+                        <div class="panel-heading" style=" background-color: rgba(255,255,255,0);border: white">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion0"
+                                   href="#collapseOne0">
+                                    <h4><b><span class="caret"></span>我的信息</b></h4>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne0" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <button class="btn btn-block" href="#userB" data-toggle="tab" style=" background-color: rgba(255,255,255,0)"><b>1.编辑信息</b></button>
+                                <button class="btn btn-block" href="#xiaoxi" data-toggle="tab" style=" background-color: rgba(255,255,255,0)"><b>2.我的消息</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <div class="col-md-12">
                     <button class="btn btn-default"data-toggle="modal" data-target="#chuangjian" style="padding-top:5px;margin-top: 10px ">
                         <span class="glyphicon glyphicon-plus" style="color: #cc0000"></span>新建</button>
                 </div>
-            </div>
             <div class="col-md-12">
                 <div class="panel-group" id="accordion1" style="width: 253px">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
+                    <div class="panel panel-default" style="background-color: rgba(255,255,255,0);border: white">
+                        <div class="panel-heading" style=" background-color: rgba(255,255,255,0);border: white">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion1"
                                    href="#collapseOne">
@@ -221,8 +236,8 @@
             </div>
             <div class="col-md-12">
                 <div class="panel-group" id="accordion2" style="width: 253px">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
+                    <div class="panel panel-default" style=" background-color: rgba(255,255,255,0);border: white">
+                        <div class="panel-heading" style=" background-color: rgba(255,255,255,0);border: white">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion2"
                                    href="#collapseTwo">
@@ -252,9 +267,73 @@
         <!--右边内容-->
         <div class="col-md-9 column">
             <div id="myTabContent" class="tab-content">
-                <!--我的电台-->
-                <div class="tab-pane fade in active" id="home">
-                    <h1>我订阅的电台(1)</h1>
+                <!--编辑个人信息-->
+                <div class="tab-pane fade" id="userB">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <b>我的信息</b>>><p4>编辑信息</p4><br><hr>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="clearfix">
+                            <div class="col-md-7">
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <p style="position: absolute;right: 45px">* 歌单名：</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="text" style="width: 400px;height: 40px" placeholder="我喜欢的音乐">
+                                    </div>
+                                    <img src="../static/images/gedan01/kongbai.png" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <p style="position: absolute;right: 45px">标签：</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h4><button class="btn btn-default btn-sm" style="position: absolute;top: 1px">欧美 x</button></h4>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <a href="" style="position: absolute;top: 1px">选择标签</a>
+                                    </div>
+                                    <img src="../static/images/gedan01/kongbai.png" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 col-md-offset-3">
+                                        <p5>选择的适合的标签，最多选三个</p5>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-12">
+                                        <img src="../static/images/gedan01/kongbai.png" alt="">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p style="position: absolute;right: 45px;top:20px">介绍：</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <textarea rows="5" style="width: 400px" placeholder="留下点你想要说的吧！"></textarea>
+                                    </div>
+                                    <img src="../static/images/gedan01/kongbai.png" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-default">保存</button>
+                                    <button class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div style="background: url('../static/images/gedan01/gedan07.png');width: 207px;height: 207px">
+                                    <div style="position:absolute;margin-bottom: 0px;padding-bottom: 0px;bottom: 0px">
+                                        <button class="btn btn-default" style="background: rgba(90,90,54,0.5);color: white;width: 207px;">编辑封面</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--编辑个人信息/-->
+                <!--我的消息-->
+                <div class="tab-pane fade" id="xiaoxi">
+                    <h3>我的消息</h3>
                     <img src="../static/images/zhixian_red.jpg" alt="" style="width: 900px;height: 3px;">
                     <div class="col-md-12">
                         <div class="col-md-3">
@@ -271,7 +350,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 col-md-offset-5">
-                           <a href="#"><span class="glyphicon glyphicon-trash" style="color: #999999;font-size: 20px"></span></a>
+                            <a href="#"><span class="glyphicon glyphicon-trash" style="color: #999999;font-size: 20px"></span></a>
                             &nbsp;<a href="#"><span class="glyphicon glyphicon-share-alt" style="color: #999999;font-size: 20px"></span></a>
                         </div>
                         <div class="col-md-1">
@@ -279,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-                <!--我的电台/-->
+                <!--我的信息/-->
                 <!--歌单栏-->
                 <div class="tab-pane fade" id="ejb">
                     <div class="col-md-12">
@@ -758,8 +837,8 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
                     <button type="button" class="btn btn-primary">确认</button>
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal -->
+            </div>
+        </div>
     </div>
 <!--模态框/-->
 <script src="../static/jquery/jquery-3.4.1.js"></script>
